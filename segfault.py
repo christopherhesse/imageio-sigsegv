@@ -6,7 +6,7 @@ import threading
 def make_iterator(q):
     while True:
         # doesn't crash
-        q.put(imageio.imread('imageio:chelsea.png'))
+        #q.put(imageio.imread('imageio:chelsea.png'))
         # crashes
         r = imageio.get_reader(uri="imageio:cockatoo.mp4", format="ffmpeg")
         q.put(r.get_next_data())
